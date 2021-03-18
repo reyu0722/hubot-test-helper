@@ -3,9 +3,7 @@
   "description": "Helper for testing hubot script",
   "main": "./src/index.js",
   "scripts": {
-    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ./node_modules/.bin/mocha -r ts-node/register \"test/**/*.ts\"",
-    "autotest": "mocha test -w",
-    "semantic-release": "semantic-release"
+    "test": "mocha -r ts-node/register \"test/**/*.ts\""
   },
   "keywords": [
     "hubot"

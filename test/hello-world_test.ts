@@ -1,13 +1,14 @@
-'use strict'
-
 import Helper from '../src/index'
 import { expect } from 'chai'
 
 const helper = new Helper('./scripts')
-const room = helper.createRoom({ httpd: false })
+let room = helper.createRoom({ httpd: false })
 
 describe('hello-world', () => {
-  afterEach(() => room.destroy())
+  afterEach(() => {
+    room.destroy()
+    room = helper.createRoom({ httpd: false })
+  })
 
   context('user says hi to hubot', () => {
     beforeEach(async () => {
