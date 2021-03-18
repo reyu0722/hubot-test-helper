@@ -1,13 +1,11 @@
 {
   "name": "hubot-test-helper",
-  "description": "Helper for testing hubot script",
+  "description": "Helper for testing hubot-traq script",
+  "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register \"test/**/*.ts\""
   },
-  "keywords": [
-    "hubot"
-  ],
   "dependencies": {
     "hubot": ">=3.0.0 <10 || 0.0.0-development",
     "hubot-traq": ">=1.7.2"
@@ -29,7 +27,7 @@
     "ts-node": "^9.1.1",
     "typescript": "latest"
   },
-  "author": "Fumiaki MATSUSHIMA",
+  "author": "reyu",
   "license": "MIT",
   "repository": {
     "type": "git",
