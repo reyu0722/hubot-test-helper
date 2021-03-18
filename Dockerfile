@@ -1,3 +1,3 @@
-FROM node:4
+FROM node:11
 
 RUN npm install -g yarn

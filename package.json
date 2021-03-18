@@ -3,22 +3,33 @@
   "description": "Helper for testing hubot script",
   "main": "./src/index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register test",
-    "autotest": "mocha --compilers coffee:coffee-script/register test -w",
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ./node_modules/.bin/mocha -r ts-node/register \"test/**/*.ts\"",
+    "autotest": "mocha test -w",
     "semantic-release": "semantic-release"
   },
   "keywords": [
     "hubot"
   ],
   "dependencies": {
-    "hubot": ">=3.0.0 <10 || 0.0.0-development"
+    "hubot": ">=3.0.0 <10 || 0.0.0-development",
+    "hubot-traq": ">=1.7.2"
   },
   "devDependencies": {
-    "chai": "latest",
-    "co": "latest",
-    "mocha": "latest",
-    "coffee-script": "latest",
-    "semantic-release": "latest"
+    "@types/chai": "^4.2.15",
+    "@types/co": "^4.6.2",
+    "@types/hubot-traq": "github:reyu0722/hubot-traq-types",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "chai": "^4.3.4",
+    "co": "^4.6.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "mocha": "^8.3.2",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "latest"
   },
   "author": "Fumiaki MATSUSHIMA",
   "license": "MIT",
