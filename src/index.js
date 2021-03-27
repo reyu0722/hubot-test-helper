@@ -81,13 +81,13 @@ class Room extends Hubot.Adapter {
     }
   }
 
-  reply(envelope /*, ...strings*/) {
+  async reply(envelope /*, ...strings*/) {
     const strings = [].slice.call(arguments, 1)
 
     strings.forEach(str => Room.messages(this).push(['hubot', `@${envelope.user.name} ${str}`]))
   }
 
-  send(/*envelope , ...strings*/) {
+  async send(/*envelope , ...strings*/) {
     const strings = [].slice.call(arguments, 1)
     strings.forEach(str => {
       if (typeof str == 'string') Room.messages(this).push(['hubot', str])
